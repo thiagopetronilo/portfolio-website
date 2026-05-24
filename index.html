@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIAGO MACHADO // CREATIVE DEVELOPER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-grid-overlay"></div>
+
+    <div id="terminal-overlay" class="terminal-overlay hidden">
+        <div class="terminal-content">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title" id="terminal-title-text">INITIALIZING_MATRIX_STREAM.EXE</span>
+            </div>
+            <div id="terminal-body" class="terminal-body"></div>
+        </div>
+    </div>
+
+    <div id="modal-id_01" class="project-modal-overlay hidden">
+        <div class="project-modal-content">
+            <div class="modal-close-btn">[ CLOSE_X ]</div>
+            <div class="modal-meta">// ARCHIVE // ID_01</div>
+            <h2 class="modal-project-title">GLOBAL-NETWORK-3D</h2>
+            
+            <div class="modal-scroll-area">
+                <h3>// OVERVIEW</h3>
+                <p>Global-Network 3D is an immersive WebGL visualization environment that renders real-time telemetry traffic across a digital holographic globe. Designed to eliminate cognitive fatigue when monitoring complex decentralized systems, it maps data packet trajectories directly onto spatial spherical coordinates.</p>
+                
+                <h3>// CORE FEATURES</h3>
+                <ul>
+                    <li><strong>Spatial Wireframe Globe:</strong> Built using matrix physics computations to project a lightweight vector topology of Earth natively in the browser.</li>
+                    <li><strong>Reactive Points System:</strong> Employs 1,200 mathematical point coordinates memory-optimized via React Hooks to simulate live server nodes.</li>
+                    <li><strong>Orbit Telemetry Controls:</strong> Integrated 360-degree interaction mechanics allowing seamless mouse drag and pan perspective changes.</li>
+                </ul>
+
+                <h3>// ENGINEERING STACK</h3>
+                <p>React, Three.js, React Three Fiber, React Three Drei, Vite, and Lucide Icons.</p>
+            </div>
+
+            <a href="https://global-traffic-psi.vercel.app/" target="_blank" class="modal-live-btn">LAUNCH LIVE APPLICATION ↗</a>
+        </div>
+    </div>
+
+    <div id="modal-id_02" class="project-modal-overlay hidden">
+        <div class="project-modal-content">
+            <div class="modal-close-btn">[ CLOSE_X ]</div>
+            <div class="modal-meta">// ARCHIVE // ID_02</div>
+            <h2 class="modal-project-title">CYBER-FASHION-STORE</h2>
+            
+            <div class="modal-scroll-area">
+                <h3>// OVERVIEW</h3>
+                <p>Cyber-Fashion Store is a high-performance conceptual retail experience engineered to showcase kinetic UI choreography and advanced layout states. The ecosystem replaces static e-commerce components with specialized text-scrambling decryptors and fluid telemetry graphs to maximize aesthetic user interaction.</p>
+                
+                <h3>// CORE FEATURES</h3>
+                <ul>
+                    <li><strong>Kinetic Motion Engines:</strong> Orchestrated multi-element micro-interactions using timeline tweens to guarantee layout recalculations render smoothly at 60 FPS.</li>
+                    <li><strong>Custom Scramble Hook:</strong> Programmed a specialized data-scrambling algorithm that dynamically decrypts content arrays frame-by-frame on catalog navigation states.</li>
+                    <li><strong>HUD Telemetry Diagnostics:</strong> Engineered reactive SVG indicator panels that map structural item load and thermal matrix capacities natively.</li>
+                </ul>
+
+                <h3>// ENGINEERING STACK</h3>
+                <p>React, Vite, GSAP (GreenSock), SVG Vector Control, and Lucide Icons.</p>
+            </div>
+
+            <a href="https://neo-athletics.vercel.app/" target="_blank" class="modal-live-btn">LAUNCH LIVE APPLICATION ↗</a>
+        </div>
+    </div>
+
+    <div id="modal-id_03" class="project-modal-overlay hidden">
+        <div class="project-modal-content">
+            <div class="modal-close-btn">[ CLOSE_X ]</div>
+            <div class="modal-meta">// ARCHIVE // ID_03</div>
+            <h2 class="modal-project-title">CLOUD-COST-MATRIX</h2>
+            
+            <div class="modal-scroll-area">
+                <h3>// OVERVIEW</h3>
+                <p>Cloud-Cost Matrix is a high-performance FinOps (Cloud Financial Operations) SaaS dashboard designed to bridge the gap between heavy infrastructure metrics and intuitive financial decisions. The main purpose is to eliminate dashboard fatigue for DevOps engineers and financial analysts by condensing multi-cloud expenses into an actionable, real-time interactive terminal.</p>
+                
+                <h3>// CORE FEATURES</h3>
+                <ul>
+                    <li><strong>Dynamic Simulation Engine:</strong> Built a reactive infrastructure forecasting tool using state-driven computation. Moving the slider recalculates projected costs across AWS, GCP, and Azure natively.</li>
+                    <li><strong>Cyber-HUD Architecture:</strong> Designed a low-latency layout combining crisp typography with razor-sharp telemetry cards to maximize data density.</li>
+                    <li><strong>Interactive Telemetry:</strong> Integrated analytical stream tracking with custom visual depth, allowing users to cross-examine historical multi-cloud spend trends.</li>
+                </ul>
+
+                <h3>// ENGINEERING STACK</h3>
+                <p>React, Vite, Tailwind CSS (v4), Recharts, and Lucide Icons.</p>
+            </div>
+
+            <a href="https://cloud-cost-matrix.vercel.app/" target="_blank" class="modal-live-btn">LAUNCH LIVE APPLICATION ↗</a>
+        </div>
+    </div>
+
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo">TM // SYSTEM<span>_</span></div>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="hamburger-icon">
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">[ 01 // HOME ]</a></li>
+                    <li><a href="#about">[ 02 // ABOUT ]</a></li>
+                    <li><a href="projects.html">[ 03 // WORK ]</a></li>
+                    <li><a href="contact.html">[ 04 // CONTACT ]</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="grid-container">
+        <section class="hero-section">
+            <div class="hero-meta-text">CORE_SYSTEM_INITIALIZED // TERMINAL 2026</div>
+            <h1 class="hero-title">THIAGO <br><span class="highlight">MACHADO</span></h1>
+            
+            <div class="hero-visual-container">
+                <div class="glitch-scanner"></div>
+                <img src="images/thiago_Image.png" alt="Picture Of Thiago Machado" class="hero-image">
+            </div>
+
+            <p class="hero-subtitle">[ POSITION: CREATIVE FRONT-END DEVELOPER ]</p>
+            <p class="hero-description">
+                Building immersive digital architecture, advanced web ecosystems, and highly interactive user environments using spatial 3D graphics.
+            </p>
+            <div class="cta-wrapper">
+                <a href="projects.html" class="cta-button">
+                    <span class="btn-text">INITIALIZE EXPERIENCE</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about-me tech-border">
+            <div class="section-tag">/ 02 . OVERVIEW</div>
+            <h2 class="section-title">BIOGRAPHY.TXT</h2>
+            <div class="about-container">
+                <p class="about-text">
+                    Hi, I’m Thiago. I am a 26-year-old creative developer operating from Brazil, working at the intersection of logical computation, audio frequencies, and advanced visual design.
+                </p>
+                <p class="about-text">
+                    My objective is to bridge the gap between abstract human ideas and hyper-modern digital realities. By combining core engineering with tools like Three.js and GSAP, I turn flat screens into multi-dimensional interactive journeys.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="featured-projects">
+            <div class="section-tag">/ 03 . SELECTIONS</div>
+            <h2 class="section-title">ACTIVE_PROJECTS</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card cyber-panel highlight-panel" style="position: relative; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="position: absolute; top: 20px; right: 20px; color: #00f3ff; font-family: 'Roboto Mono', monospace; font-size: 0.65rem; font-weight: bold; border: 1px solid rgba(0, 243, 255, 0.3); padding: 4px 10px; background: rgba(5, 5, 7, 0.9); letter-spacing: 0.05em; z-index: 10;">
+                        WebGL: ACTIVE
+                    </div>
+                    <div class="project-info" style="display: flex; flex-direction: column; flex-grow: 1; text-align: left; padding-top: 15px;">
+                        <div class="project-num" style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-bottom: 5px;">ID_01 // SPATIAL UI</div>
+                        <h3>GLOBAL-NETWORK-3D</h3>
+                        <p>Immersive 3D data visualization environment built for real-time global telemetry tracking and edge node network controls.</p>
+                        
+                        <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px;">
+                            <span style="font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; color: #fff; background: rgba(255,255,255,0.01);">REACT</span>
+                            <span style="font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; color: #fff; background: rgba(255,255,255,0.01);">THREE.JS</span>
+                            <span style="font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; color: #fff; background: rgba(255,255,255,0.01);">WEBGL</span>
+                        </div>
+                        
+                        <a href="#" class="interactive-trigger" data-project="id_01" style="display: inline-block; color: #fff; text-decoration: none; font-weight: bold; font-size: 0.85rem; margin-top: auto; position: relative; z-index: 100; cursor: pointer; width: fit-content;">LAUNCH ARCHIVE ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-card cyber-panel highlight-panel" style="position: relative; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="position: absolute; top: 20px; right: 20px; color: #00f3ff; font-family: 'Roboto Mono', monospace; font-size: 0.65rem; font-weight: bold; border: 1px solid rgba(0, 243, 255, 0.3); padding: 4px 10px; background: rgba(5, 5, 7, 0.9); letter-spacing: 0.05em; z-index: 10;">
+                        MOTION: ACTIVE
+                    </div>
+                    <div class="project-info" style="display: flex; flex-direction: column; flex-grow: 1; text-align: left; padding-top: 15px;">
+                        <div class="project-num" style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-bottom: 5px;">ID_02 // KINETIC UI</div>
+                        <h3>CYBER-FASHION-STORE</h3>
+                        <p>High-performance e-commerce catalog featuring automated layout tweens, dynamic telemetry diagnostics, and real-time interface text decryption.</p>
+                        
+                        <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px;">
+                            <span style="font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; color: #fff; background: rgba(255,255,255,0.01);">REACT</span>
+                            <span style="font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; color: #fff; background: rgba(255,255,255,0.01);">GSAP</span>
+                            <span style="font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; color: #fff; background: rgba(255,255,255,0.01);">HUD_SPECS</span>
+                        </div>
+                        
+                        <a href="#" class="interactive-trigger" data-project="id_02" style="display: inline-block; color: #fff; text-decoration: none; font-weight: bold; font-size: 0.85rem; margin-top: auto; position: relative; z-index: 100; cursor: pointer; width: fit-content;">LAUNCH ARCHIVE ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-card cyber-panel highlight-panel" style="position: relative; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="position: absolute; top: 20px; right: 20px; color: #007BFF; font-family: 'Roboto Mono', monospace; font-size: 0.65rem; font-weight: bold; border: 1px solid rgba(0, 123, 255, 0.3); padding: 4px 10px; background: rgba(5, 5, 7, 0.9); letter-spacing: 0.05em; z-index: 10;">
+                        FINOPS: ACTIVE
+                    </div>
+                    <div class="project-info" style="display: flex; flex-direction: column; flex-grow: 1; text-align: left; padding-top: 15px;">
+                        <div class="project-num" style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-bottom: 5px;">ID_03 // CLOUD SaaS</div>
+                        <h3>CLOUD-COST-MATRIX</h3>
+                        <p>High-performance FinOps analytics platform for cloud cost optimization, state simulation, and real-time data tracking.</p>
+                        
+                        <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px;">
+                            <span style="font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; color: #fff; background: rgba(255,255,255,0.01);">REACT</span>
+                            <span style="font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; color: #fff; background: rgba(255,255,255,0.01);">TAILWIND CSS</span>
+                            <span style="font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1); padding: 4px 10px; color: #fff; background: rgba(255,255,255,0.01);">RECHARTS</span>
+                        </div>
+                        
+                        <a href="#" class="interactive-trigger" data-project="id_03" style="display: inline-block; color: #fff; text-decoration: none; font-weight: bold; font-size: 0.85rem; margin-top: auto; position: relative; z-index: 100; cursor: pointer; width: fit-content;">LAUNCH ARCHIVE ↗</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="tech-stack tech-border">
+            <div class="section-tag">/ 04 . ENGINE</div>
+            <h2 class="section-title">CORE_STACK.SYS</h2>
+            <div class="skills-container">
+                <div class="skill-badge">HTML5 // 01</div>
+                <div class="skill-badge">CSS3 // 02</div>
+                <div class="skill-badge">JAVASCRIPT // 03</div>
+                <div class="skill-badge">REACT // 04</div>
+                <div class="skill-badge">THREE.JS // 05</div>
+                <div class="skill-badge">GSAP // 06</div>
+                <div class="skill-badge">GIT // 07</div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>// INDEX</h4>
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="projects.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>// NETWORKS</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/thiago-machado-7018361ba/">LINKEDIN ↗</a></li>
+                    <li><a href="https://github.com/dashboard">GITHUB ↗</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>// LOC_DATA</h4>
+                <p class="tech-data">thiago2011nao@gmail.com</p>
+                <p class="tech-data">LIMERICK, IRELAND</p>
+            </div>
+        </div>
+        <div class="copyright" style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
+            <p>CORE SYSTEM VERSION 2.6 // © 2026 THIAGO MACHADO. ALL RIGHTS RESERVED.</p>
+            <p style="font-size: 0.75rem; color: #007BFF; letter-spacing: 1px; font-weight: bold; margin-top: 5px; font-family: 'Roboto Mono', monospace;">
+                &lt;DESIGNED_AND_BUILT_BY_THIAGO_MACHADO //&gt;
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const triggers = document.querySelectorAll(".interactive-trigger");
+            const terminalOverlay = document.getElementById("terminal-overlay");
+            const terminalBody = document.getElementById("terminal-body");
+            const terminalTitleText = document.getElementById("terminal-title-text");
+
+            const projectLogs = {
+                id_01: {
+                    title: "INITIALIZING_SPATIAL_GLOBO_STREAM.EXE",
+                    lines: [
+                        ">> INITIALIZING THREE.JS WEBGL RENDER BUFFER...",
+                        ">> ALLOCATING MEMORY FOR 1,200 SPATIAL GEOMETRY POINTS...",
+                        ">> STABILIZING 3D ORBITPERSPECTIVE INTERACTION LAYER... [OK]",
+                        ">> COMPILING LIVE SAT-NODE METRICS...",
+                        ">> SUCCESS: 3D DATA VIEW INTEGRITY SECURED. OPENING FILE_ID_01..."
+                    ]
+                },
+                // ADICIONADO: LOG DO TERMINAL DO SEGUNDO PROJETO
+                id_02: {
+                    title: "INITIALIZING_KINETIC_MOTION_DECRYPT.EXE",
+                    lines: [
+                        ">> CONFIGURING TIMELINE TWEEN ANIMATION BUFFERS...",
+                        ">> FETCHING INTERFACE ELEMENT GRAPH CORES...",
+                        ">> PARSING CUSTOM SCRAMBLE HOOK DATA STREAMS... [OK]",
+                        ">> INTEGRATING REACTIVE HUD TELEMETRY INDICATORS...",
+                        ">> SUCCESS: MOTION CORE STABILIZED. CONFIGURING FILE_ID_02..."
+                    ]
+                },
+                id_03: {
+                    title: "INITIALIZING_MATRIX_STREAM.EXE",
+                    lines: [
+                        ">> INITIALIZING MATRIX DATA ACCESS PROTOCOLS...",
+                        ">> STATUS: CONNECTING LOCAL HOST ARCHIVE...",
+                        ">> ENCRYPTING SUBSYSTEM INFRASTRUCTURE LAYERS... [OK]",
+                        ">> MOUNTING FINOPS ANALYTICS READOUT MODULES...",
+                        ">> SUCCESS: DATA INTEGRITY VERIFIED. OPENING FILE_ID_03..."
+                    ]
+                }
+            };
+
+            triggers.forEach(trigger => {
+                trigger.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    
+                    const projectId = trigger.getAttribute("data-project");
+                    const logConfig = projectLogs[projectId];
+                    const targetModal = document.getElementById(`modal-${projectId}`);
+
+                    if (!logConfig || !targetModal) return;
+
+                    terminalTitleText.textContent = logConfig.title;
+                    terminalOverlay.classList.remove("hidden");
+                    terminalBody.innerHTML = "";
+
+                    let currentLine = 0;
+
+                    const logInterval = setInterval(() => {
+                        if (currentLine < logConfig.lines.length) {
+                            const lineElement = document.createElement("p");
+                            lineElement.className = "terminal-line";
+                            lineElement.textContent = logConfig.lines[currentLine];
+                            
+                            if (logConfig.lines[currentLine].includes("[OK]") || logConfig.lines[currentLine].includes("SUCCESS")) {
+                                lineElement.style.color = "#007BFF";
+                                lineElement.style.fontWeight = "bold";
+                            }
+                            
+                            terminalBody.appendChild(lineElement);
+                            terminalBody.scrollTop = terminalBody.scrollHeight;
+                            currentLine++;
+                        } else {
+                            clearInterval(logInterval);
+                            
+                            setTimeout(() => {
+                                terminalOverlay.classList.add("hidden");
+                                targetModal.classList.remove("hidden");
+                                document.body.style.overflow = "hidden";
+                            }, 400);
+                        }
+                    }, 200);
+                });
+            });
+
+            document.querySelectorAll(".modal-close-btn").forEach(closeBtn => {
+                closeBtn.addEventListener("click", () => {
+                    closeBtn.closest(".project-modal-overlay").classList.add("hidden");
+                    document.body.style.overflow = "auto";
+                });
+            });
+
+            document.querySelectorAll(".project-modal-overlay").forEach(modalOverlay => {
+                modalOverlay.addEventListener("click", (e) => {
+                    if (e.target === modalOverlay) {
+                        modalOverlay.classList.add("hidden");
+                        document.body.style.overflow = "auto";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
