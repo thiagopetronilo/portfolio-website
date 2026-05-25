@@ -12,7 +12,6 @@ html {
 }
 
 body {
-    /* Fontes mono-espaçadas e geométricas dão o ar de sistema operacional futurista */
     font-family: 'Roboto Mono', monospace; 
     background-color: #050507; /* Preto profundo "OLED" */
     color: #d1d1d6;
@@ -51,7 +50,7 @@ h1, h2, h3, h4 {
     color: #ffffff;
 }
 
-/* Layout Grid Central */
+/* Layout Grid Central - Base Responsiva */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -84,7 +83,7 @@ h1, h2, h3, h4 {
    ========================================================================== */
 #main-header {
     background-color: rgba(5, 5, 7, 0.7);
-    backdrop-filter: blur(12px); /* Efeito de vidro borrado */
+    backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     position: fixed;
@@ -137,6 +136,10 @@ h1, h2, h3, h4 {
     text-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
+.menu-checkbox {
+    display: none;
+}
+
 /* ==========================================================================
    HERO SECTION
    ========================================================================== */
@@ -155,14 +158,14 @@ h1, h2, h3, h4 {
 }
 
 .hero-title {
-    font-size: clamp(3rem, 8vw, 7rem); /* Escala perfeitamente conforme o tamanho da tela */
+    font-size: clamp(2.5rem, 7vw, 6.5rem); 
     line-height: 0.9;
     margin-bottom: 30px;
 }
 
 .hero-title .highlight {
     color: transparent;
-    -webkit-text-stroke: 1px #fff; /* Texto vazado estilo UNVRS */
+    -webkit-text-stroke: 1px #fff; 
 }
 
 .hero-visual-container {
@@ -178,7 +181,6 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
-/* Linha horizontal de scan hacker simulada */
 .glitch-scanner {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 2px;
@@ -209,7 +211,6 @@ h1, h2, h3, h4 {
     margin-bottom: 40px;
 }
 
-/* Botão Estilo Terminal Interativo */
 .cta-button {
     display: inline-flex;
     align-items: center;
@@ -277,24 +278,6 @@ h1, h2, h3, h4 {
     transform: translateY(-5px);
 }
 
-.project-img-container {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    margin-bottom: 20px;
-}
-
-.card-overlay-data {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0,0,0,0.8);
-    font-size: 0.65rem;
-    padding: 4px 8px;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #007BFF;
-}
-
 .project-num {
     font-size: 0.75rem;
     color: rgba(255,255,255,0.3);
@@ -328,20 +311,6 @@ h1, h2, h3, h4 {
     background: rgba(255,255,255,0.01);
 }
 
-.view-project-link {
-    font-size: 0.8rem;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: color 0.3s;
-}
-
-.view-project-link:hover {
-    color: #007BFF;
-}
-
-/* Modificação sutil para destacar visualmente o painel FinOps na lista */
 .highlight-panel {
     border: 1px solid rgba(0, 123, 255, 0.15) !important;
     background: linear-gradient(180deg, rgba(0, 123, 255, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
@@ -437,7 +406,7 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   TERMINAL OVERLAY INTERACTIVE MECHANICS (MECÂNICA DO LOG)
+   TERMINAL OVERLAY INTERACTIVE MECHANICS
    ========================================================================== */
 .terminal-overlay {
     position: fixed;
@@ -451,7 +420,7 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Garante que fica por cima absoluto de tudo */
+    z-index: 9999; 
     transition: opacity 0.3s ease;
 }
 
@@ -462,7 +431,7 @@ h1, h2, h3, h4 {
 }
 
 .terminal-content {
-    width: 90%;
+    width: 95%;
     max-width: 650px;
     background: #0c0c12;
     border: 1px solid rgba(0, 123, 255, 0.3);
@@ -508,78 +477,8 @@ h1, h2, h3, h4 {
     font-size: 0.8rem;
     color: #a1a1aa;
     line-height: 1.5;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
-/* ==========================================================================
-   MEDIA QUERIES (RESPONSIVIDADE)
-   ========================================================================== */
-@media (max-width: 900px) {
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
-@media (max-width: 600px) {
-    .header-container { padding: 0 20px; }
-    
-    .hamburger-icon {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        cursor: pointer;
-        z-index: 110;
-    }
-    .hamburger-icon .line {
-        display: block;
-        width: 25px;
-        height: 1px;
-        background-color: #fff;
-        transition: 0.3s;
-    }
-    
-    .main-nav {
-        display: none;
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0; left: 0;
-        background-color: rgba(5, 5, 7, 0.98);
-        backdrop-filter: blur(20px);
-        align-items: center;
-        justify-content: center;
-        z-index: 105;
-    }
-    
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    
-    .main-nav ul li a {
-        font-size: 1.2rem;
-    }
-
-    .menu-checkbox:checked ~ .main-nav {
-        display: flex;
-    }
-    
-    .menu-checkbox:checked ~ .hamburger-icon .line:nth-child(1) {
-        transform: translateY(3.5px) rotate(45deg);
-    }
-    .menu-checkbox:checked ~ .hamburger-icon .line:nth-child(2) {
-        transform: translateY(-3.5px) rotate(-45deg);
-    }
-}
 /* ==========================================================================
    PROJECT METADATA MODAL (BOX DE INFORMAÇÕES)
    ========================================================================== */
@@ -595,11 +494,11 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10000; /* Acima do header fixo */
+    z-index: 10000; 
 }
 
 .project-modal-content {
-    width: 90%;
+    width: 95%;
     max-width: 600px;
     background: #0b0b0e;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -614,7 +513,6 @@ h1, h2, h3, h4 {
     display: none !important;
 }
 
-/* Botão de Fechar Estilo Sistema Operacional */
 .modal-close-btn {
     position: absolute;
     top: 20px;
@@ -626,7 +524,7 @@ h1, h2, h3, h4 {
 }
 
 .modal-close-btn:hover {
-    color: #ff5f56; /* Tom vermelho de alerta ao cancelar */
+    color: #ff5f56; 
 }
 
 .modal-meta {
@@ -645,7 +543,6 @@ h1, h2, h3, h4 {
     padding-bottom: 15px;
 }
 
-/* Área de Rolagem de Texto */
 .modal-scroll-area {
     max-height: 350px;
     overflow-y: auto;
@@ -653,7 +550,6 @@ h1, h2, h3, h4 {
     margin-bottom: 30px;
 }
 
-/* Customização sutil do scrollbar interno do box */
 .modal-scroll-area::-webkit-scrollbar {
     width: 4px;
 }
@@ -695,7 +591,6 @@ h1, h2, h3, h4 {
     color: #007BFF;
 }
 
-/* Botão de Redirecionamento da Vercel */
 .modal-live-btn {
     display: block;
     width: 100%;
@@ -715,4 +610,134 @@ h1, h2, h3, h4 {
     background: transparent;
     color: #ffffff;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   ⚡ SYSTEM BREAKPOINTS (MEDIA QUERIES) ⚡
+   ========================================================================== */
+
+/* 1. DISPOSITIVOS MÉDIOS / PORTÁTEIS (TABLETS - max-width: 1024px) */
+@media (max-width: 1024px) {
+    .grid-container {
+        padding: 0 24px;
+        gap: 30px 15px;
+    }
+
+    .about-container {
+        grid-template-columns: 1.1fr 0.9fr; /* Mantém lado a lado, mas reduz compressão */
+        gap: 24px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas firmes no tablet */
+        gap: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr); /* Mantém as 3 colunas de dados visíveis */
+        gap: 20px;
+    }
+}
+
+/* 2. DISPOSITIVOS PEQUENOS (PHONES EM LANDSCAPE / MINIS - max-width: 900px) */
+@media (max-width: 900px) {
+    .about-container {
+        grid-template-columns: 1fr; /* Biografia quebra para coluna única */
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* Links do rodapé empilham perfeitamente */
+        gap: 30px;
+    }
+}
+
+/* 3. DISPOSITIVOS MÓVEIS (SMARTPHONES - max-width: 600px) */
+@media (max-width: 600px) {
+    .grid-container {
+        padding: 0 16px; /* Reduz margens externas para aproveitar a tela */
+        margin: 40px auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Cards de projetos tomam 100% da largura em coluna */
+        gap: 25px;
+    }
+
+    .tech-border {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1); /* Transiciona borda vertical para horizontal */
+        padding-left: 0;
+        padding-top: 15px;
+    }
+
+    .hero-section {
+        padding-top: 80px;
+    }
+
+    .hero-visual-container {
+        max-width: 100%; /* Imagem do Scanner expande sem quebrar limites */
+    }
+
+    .project-modal-content {
+        padding: 24px 16px; /* Modais ficam confortáveis no toque */
+        width: 95%;
+    }
+
+    .modal-project-title {
+        font-size: 1.4rem;
+    }
+
+    /* MECÂNICA HUD: MENU MOBILE DE ALTA PERFORMANCE */
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 110;
+    }
+
+    .hamburger-icon .line {
+        display: block;
+        width: 24px;
+        height: 1px;
+        background-color: #fff;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .main-nav {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0; left: 0;
+        background-color: rgba(5, 5, 7, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        align-items: center;
+        justify-content: center;
+        z-index: 105;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .main-nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    /* Ativação do Menu via Checkbox Native */
+    .menu-checkbox:checked ~ .main-nav {
+        display: flex;
+    }
+    
+    /* Animação Tática Cross do Hamburger */
+    .menu-checkbox:checked ~ .hamburger-icon .line:nth-child(1) {
+        transform: translateY(3.5px) rotate(45deg);
+    }
+    .menu-checkbox:checked ~ .hamburger-icon .line:nth-child(2) {
+        transform: translateY(-3.5px) rotate(-45deg);
+    }
 }

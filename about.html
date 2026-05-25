@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIAGO MACHADO // ABOUT ME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <style>
+        .about-layout {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        #globe-viewport {
+            width: 100%;
+            height: 480px;
+            background: #050507;
+            position: relative;
+            cursor: grab;
+        }
+
+        #globe-viewport:active {
+            cursor: grabbing;
+        }
+
+        .globe-hud-data {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            color: #00f3ff;
+            pointer-events: none;
+            z-index: 10;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .bio-timeline {
+            margin-top: 40px;
+            border-left: 1px solid rgba(0, 123, 255, 0.3);
+            padding-left: 20px;
+        }
+
+        .timeline-node {
+            margin-bottom: 25px;
+            position: relative;
+            text-align: left;
+        }
+
+        .timeline-node::before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            background: #007BFF;
+            box-shadow: 0 0 8px #007BFF;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 900px) {
+            .about-layout {
+                grid-template-columns: 1fr;
+            }
+            #globe-viewport {
+                height: 380px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-grid-overlay"></div>
+
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo">TM // SYSTEM<span>_</span></div>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="hamburger-icon">
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">[ 01 // HOME ]</a></li>
+                    <li><a href="about.html" class="active">[ 02 // ABOUT ]</a></li>
+                    <li><a href="index.html#projects">[ 03 // WORK ]</a></li>
+                    <li><a href="#main-footer">[ 04 // CONTACT ]</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="grid-container" style="padding-top: 100px;">
+        <section class="about-layout">
+            
+            <div class="tech-border" style="padding-top: 15px;">
+                <div class="section-tag">/ 02 . USER_IDENTITY</div>
+                <h2 class="section-title">BIOGRAPHY.TXT</h2>
+                
+                <p class="about-text" style="font-size: 1.05rem; margin-bottom: 20px; color: #ffffff;">
+                    Hi, I’m Thiago Machado. I am a creative front-end developer originally from Recife, Brazil, who relocated to Ireland eight years ago to expand my horizons.
+                </p>
+                <p class="about-text" style="margin-bottom: 20px;">
+                    Currently, I am pursuing a degree in Immersive Digital Media, aligning my academic journey with a deep engineering focus on Cloud Front-end ecosystems and UX-centric SaaS architectures. 
+                </p>
+                <p class="about-text">
+                    When I am off-screen and disconnected from the matrix, I channel my creative and physical energy into playing sports, producing music, and football.
+                </p>
+
+                <div class="bio-timeline">
+                    <div class="timeline-node">
+                        <span style="color: #00f3ff; font-weight: bold; font-size: 0.85rem;">ORIGIN_NODE // RECIFE, BRAZIL 🇧🇷</span>
+                        <p class="about-text" style="font-size: 0.85rem; margin-top: 5px;">My roots and the initial environment where my passion for logical computing, design, and audio frequencies began.</p>
+                    </div>
+                    <div class="timeline-node">
+                        <span style="color: #ff9900; font-weight: bold; font-size: 0.85rem;">CURRENT_LOCATION // LIMERICK, IRELAND 🇮🇪</span>
+                        <p class="about-text" style="font-size: 0.85rem; margin-top: 5px;">Relocated 8 years ago. Currently balancing my academic specialization in Immersive Digital Media with building decentralized cloud monitors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card cyber-panel highlight-panel" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                <div id="globe-viewport">
+                    <div class="globe-hud-data">
+                        GEOLOCATION_SERVICE // ACTIVE<br>
+                        REAL_GEOMETRY_MAP: TRUE<br>
+                        NODE_01: RECIFE [BR]<br>
+                        NODE_02: LIMERICK [IE]<br>
+                        TRANSATLANTIC_UPLINK: SECURED
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+        <footer id="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>// INDEX</h4>
+                <ul>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#projects">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>// NETWORKS</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/thiago-machado-7018361ba/">LINKEDIN ↗</a></li>
+                    <li><a href="https://github.com/thiagopetronilo">GITHUB ↗</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>// LOC_DATA</h4>
+                <p class="tech-data">thiago2011nao@gmail.com</p>
+                <p class="tech-data">LIMERICK, IRELAND</p>
+            </div>
+        </div>
+        <div class="copyright" style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
+            <p>CORE SYSTEM VERSION 2.6 // © 2026 THIAGO MACHADO. ALL RIGHTS RESERVED.</p>
+            <p style="font-size: 0.75rem; color: #007BFF; letter-spacing: 1px; font-weight: bold; margin-top: 5px; font-family: 'Roboto Mono', monospace;">
+                &lt;DESIGNED_AND_BUILT_BY_THIAGO_MACHADO //&gt;
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const canvasContainer = document.getElementById('globe-viewport');
+        
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, canvasContainer.clientWidth / canvasContainer.clientHeight, 0.1, 1000);
+        camera.position.z = 135;
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        canvasContainer.appendChild(renderer.domElement);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.enableZoom = false;
+
+        const globeGroup = new THREE.Group();
+        scene.add(globeGroup);
+
+        const globeRadius = 50;
+
+        const globeGeometry = new THREE.SphereGeometry(globeRadius, 32, 32);
+        const globeMaterial = new THREE.MeshBasicMaterial({
+            color: 0x007BFF,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.06
+        });
+        const techGlobe = new THREE.Mesh(globeGeometry, globeMaterial);
+        globeGroup.add(techGlobe);
+
+        function calc3DCoordinates(lat, lon, radius) {
+            const phi = (90 - lat) * (Math.PI / 180);
+            const theta = (lon + 180) * (Math.PI / 180);
+
+            const x = -(radius * Math.sin(phi) * Math.sin(theta));
+            const y = radius * Math.cos(phi);
+            const z = radius * Math.sin(phi) * Math.cos(theta);
+
+            return new THREE.Vector3(x, y, z);
+        }
+
+        // Projeção Real do Brasil 🇧🇷
+        const realBrazilCoordinates = [
+            {lat: 4.39, lon: -51.5}, {lat: 2.15, lon: -48.5}, {lat: -1.05, lon: -46.0},
+            {lat: -2.55, lon: -44.3}, {lat: -2.85, lon: -40.85}, {lat: -4.88, lon: -37.1},
+            {lat: -5.15, lon: -35.5}, {lat: -5.8, lon: -35.2}, {lat: -7.11, lon: -34.8},
+            {lat: -8.05428, lon: -34.8813}, // RECIFE
+            {lat: -9.5, lon: -35.6}, {lat: -13.0, lon: -38.5}, {lat: -17.8, lon: -39.3},
+            {lat: -23.0, lon: -42.0}, {lat: -24.0, lon: -46.3}, {lat: -25.4, lon: -48.5},
+            {lat: -30.0, lon: -50.1}, {lat: -33.74, lon: -53.37}, {lat: -30.1, lon: -57.5},
+            {lat: -26.0, lon: -53.5}, {lat: -22.4, lon: -57.9}, {lat: -19.9, lon: -58.2},
+            {lat: -16.3, lon: -58.0}, {lat: -14.3, lon: -60.0}, {lat: -12.5, lon: -63.1},
+            {lat: -11.0, lon: -65.3}, {lat: -9.6, lon: -65.5}, {lat: -7.5, lon: -73.9},
+            {lat: -4.3, lon: -70.0}, {lat: -1.1, lon: -67.0}, {lat: 2.2, lon: -67.4},
+            {lat: 3.8, lon: -63.2}, {lat: 4.5, lon: -61.6}, {lat: 5.2, lon: -60.2},
+            {lat: 4.2, lon: -54.5}, {lat: 4.39, lon: -51.5}
+        ];
+
+        // Projeção Real da Irlanda 🇮🇪
+        const realIrelandCoordinates = [
+            {lat: 55.38, lon: -7.37}, {lat: 55.15, lon: -6.0}, {lat: 54.6, lon: -5.55},
+            {lat: 54.0, lon: -6.1}, {lat: 53.33, lon: -6.2}, {lat: 52.8, lon: -6.0},
+            {lat: 52.2, lon: -6.3}, {lat: 52.17, lon: -6.6}, {lat: 51.9, lon: -7.8},
+            {lat: 51.45, lon: -9.45}, {lat: 51.6, lon: -10.0}, {lat: 52.1, lon: -10.4},
+            {lat: 52.5, lon: -9.9}, 
+            {lat: 52.6653, lon: -8.6238}, // LIMERICK
+            {lat: 52.9, lon: -9.4}, {lat: 53.6, lon: -10.1}, {lat: 54.2, lon: -10.3},
+            {lat: 54.3, lon: -9.0}, {lat: 54.8, lon: -8.4}, {lat: 55.1, lon: -8.2},
+            {lat: 55.38, lon: -7.37}
+        ];
+
+        function renderCountryOutline(coordsArray, colorHex, opacityValue) {
+            const points = coordsArray.map(p => calc3DCoordinates(p.lat, p.lon, globeRadius + 0.3));
+            const geometry = new THREE.BufferGeometry().setFromPoints(points);
+            const material = new THREE.LineBasicMaterial({
+                color: colorHex,
+                transparent: true,
+                opacity: opacityValue,
+                linewidth: 2
+            });
+            const lineLoop = new THREE.LineLoop(geometry, material);
+            globeGroup.add(lineLoop);
+        }
+
+        renderCountryOutline(realBrazilCoordinates, 0x00f3ff, 0.85);
+        renderCountryOutline(realIrelandCoordinates, 0xff9900, 0.85);
+
+        const recifeVector = calc3DCoordinates(-8.05428, -34.8813, globeRadius);
+        const limerickVector = calc3DCoordinates(52.6653, -8.6238, globeRadius);
+
+        function deployNodeMarker(vectorPos, coreColor, pulseColor) {
+            const pointGeom = new THREE.SphereGeometry(1.3, 16, 16);
+            const pointMat = new THREE.MeshBasicMaterial({ color: coreColor });
+            const pointMesh = new THREE.Mesh(pointGeom, pointMat);
+            pointMesh.position.copy(vectorPos);
+            globeGroup.add(pointMesh);
+
+            const ringGeom = new THREE.RingGeometry(1.8, 2.8, 32);
+            const ringMat = new THREE.MeshBasicMaterial({ color: pulseColor, side: THREE.DoubleSide, transparent: true, opacity: 0.9 });
+            const ringMesh = new THREE.Mesh(ringGeom, ringMat);
+            ringMesh.position.copy(vectorPos);
+            ringMesh.lookAt(new THREE.Vector3(0, 0, 0));
+            globeGroup.add(ringMesh);
+        }
+
+        deployNodeMarker(recifeVector, 0x00f3ff, 0x00f3ff);
+        deployNodeMarker(limerickVector, 0xff9900, 0xff9900);
+
+        const midpointElevation = globeRadius * 1.45;
+        const controlVector = new THREE.Vector3()
+            .addVectors(recifeVector, limerickVector)
+            .multiplyScalar(0.5)
+            .normalize()
+            .multiplyScalar(midpointElevation);
+
+        const curveTrajectory = new THREE.QuadraticBezierCurve3(recifeVector, controlVector, limerickVector);
+        const pathPoints = curveTrajectory.getPoints(60);
+        const arcGeometry = new THREE.BufferGeometry().setFromPoints(pathPoints);
+        
+        const arcMaterial = new THREE.LineBasicMaterial({
+            color: 0x00f3ff,
+            transparent: true,
+            opacity: 0.8,
+            linewidth: 2
+        });
+        const communicationArc = new THREE.Line(arcGeometry, arcMaterial);
+        globeGroup.add(communicationArc);
+
+        globeGroup.rotation.y = 2.45;
+        globeGroup.rotation.x = 0.35;
+
+        function renderLoop() {
+            requestAnimationFrame(renderLoop);
+            globeGroup.rotation.y += 0.0012;
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = canvasContainer.clientWidth / canvasContainer.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
+        });
+
+        renderLoop();
+    </script>
+</body>
+</html>

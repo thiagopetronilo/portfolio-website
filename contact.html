@@ -3,99 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Thiago Machado</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>THIAGO MACHADO // CONTACT ME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajustes específicos para os campos do formulário se integrarem ao tema escuro */
+        .form-section input, .form-section textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 14px;
+            color: #ffffff;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-section input:focus, .form-section textarea:focus {
+            outline: none;
+            border-color: #007BFF;
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.1);
+        }
+        
+        .form-section label {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+        }
+
+        /* 🚀 BOTÃO TOTALMENTE REFORMULADO NO PADRÃO CYBERPUNK SÊNIOR */
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #ffffff;
+            padding: 18px 32px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #007BFF;
+            /* Efeito Glow Azul Elétrico combinando com os cards ativos */
+            box-shadow: 0 0 25px rgba(0, 123, 255, 0.35);
+        }
+    </style>
 </head>
 <body>
+    <div class="bg-grid-overlay"></div>
+
     <header id="main-header">
         <div class="header-container">
-            <div class="logo">Thiago Machado</div>
+            <div class="logo">TM // SYSTEM<span>_</span></div>
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-            <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+            <label for="menu-toggle" class="hamburger-icon">
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="modules.html">Modules</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Interests</a></li>
-                    <li><a href="#">Computing</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">[ 01 // HOME ]</a></li>
+                    <li><a href="about.html">[ 02 // ABOUT ]</a></li>
+                    <li><a href="index.html#projects">[ 03 // WORK ]</a></li>
+                    <li><a href="contact.html" class="active">[ 04 // CONTACT ]</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="grid-container">
+    <main class="grid-container" style="padding-top: 100px;">
         
-        <h2 class="course-title">Contact Me</h2>
+        <section class="form-section tech-border" style="grid-column: 1 / -1; padding-top: 15px; text-align: left;">
+            <div class="section-tag">/ 04 . COMMUNICATIONS</div>
+            <h2 class="section-title">CONTACT_ME.LOG</h2>
 
-        <section class="form-section">
-            <form id="contact-form" action="https://tusprojects.net/rdwd-contact-response-2026.php" method="POST">                
-                <div class="form-row form-full-width">
+            <form id="contact-form" action="https://formsubmit.co/thiago2011nao@gmail.com" method="POST">                
+                
+                <input type="hidden" name="_captcha" value="false"> 
+                <input type="hidden" name="_subject" value="💼 NOVO CONTATO: Portfólio Thiago Machado"> 
+                
+                <div class="form-row form-full-width" style="margin-bottom: 25px;">
                     <label for="empName">Name:</label>
                     <input type="text" id="empName" name="employerName" required>
                 </div>
                 
-                <div class="form-row form-full-width">
+                <div class="form-row form-full-width" style="margin-bottom: 25px;">
                     <label for="compName">Company Name:</label>
                     <input type="text" id="compName" name="company">
                 </div>
 
-                <div class="form-row form-full-width">
+                <div class="form-row form-full-width" style="margin-bottom: 25px;">
                     <label for="mobNumber">Mobile Number:</label>
                     <input type="tel" id="mobNumber" name="mobileNo" pattern="^08[3456789][0-9]{7}$" title="Must be a valid Irish mobile number starting with 08">
                 </div>
 
-                <div class="form-row form-full-width">
-                    <label for="email1">Email:</label>
-                    <input type="email" id="email1" name="emailAdd1" required>
+                <div class="form-row form-full-width" style="margin-bottom: 25px;">
+                    <label for="email1">Email Address:</label>
+                    <input type="email" id="email1" name="email" required>
                 </div>
 
-                <div class="form-row form-full-width">
-                    <label for="email2">Retype Email:</label>
-                    <input type="email" id="email2" name="emailAdd2" required>
-                </div>
-
-                <div class="form-row form-full-width">
-                    <label for="userQuery">Query:</label>
+                <div class="form-row form-full-width" style="margin-bottom: 30px;">
+                    <label for="userQuery">Message / Query:</label>
                     <textarea id="userQuery" name="query" rows="5" required></textarea>
                 </div>
 
                 <div class="form-row form-full-width">
-                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="submit" class="submit-btn">SUBMIT TERMINAL MESSAGE →</button>
                 </div>
             </form>
         </section>
 
     </main>
 
-    <footer id="main-footer">
+        <footer id="main-footer">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>Navigation</h4>
+                <h4>// INDEX</h4>
                 <ul>
-                    <li><a href="modules.html">Modules</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="contact.html">Contact me</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#projects">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Find Me</h4>
+                <h4>// NETWORKS</h4>
                 <ul>
-                    <li><a href="#">Linkedin</a></li>
-                    <li><a href="#">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/thiago-machado-7018361ba/">LINKEDIN ↗</a></li>
+                    <li><a href="https://github.com/thiagopetronilo">GITHUB ↗</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contact</h4>
-                <p>thiago2011nao@gmail.com</p>
-                <p>+353 080 000 0000</p>
-                <p>Limerick, Ireland</p>
+                <h4>// LOC_DATA</h4>
+                <p class="tech-data">thiago2011nao@gmail.com</p>
+                <p class="tech-data">LIMERICK, IRELAND</p>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2026 Thiago Machado. All rights reserved.</p>
+        <div class="copyright" style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
+            <p>CORE SYSTEM VERSION 2.6 // © 2026 THIAGO MACHADO. ALL RIGHTS RESERVED.</p>
+            <p style="font-size: 0.75rem; color: #007BFF; letter-spacing: 1px; font-weight: bold; margin-top: 5px; font-family: 'Roboto Mono', monospace;">
+                &lt;DESIGNED_AND_BUILT_BY_THIAGO_MACHADO //&gt;
+            </p>
         </div>
     </footer>
 </body>
